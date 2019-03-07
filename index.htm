@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cody Lee</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Cody Lee, Cody, Lee, web, website, websites, developer, web developer, website developer, junior web developer, junior website developer, web design, web designer, entry level web designer, Macon, Ga, Warner Robins, Ga, middle Georgia area, mid-ga area, middle ga are, Roberta, Ga">
+	<meta name="description" content="My name is Cody Lee and I am a junior web developer/web designer here in middle Georgia. I specialize in Responsive web development using Bootstrap, and using the latest techniques in HTML and CSS. I am a recent college honor graduate from Middle Georgia State University currently living in Roberta, GA.">
+	<link href="style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	<script>
+		var app = angular.module("myApp", ["ngRoute"]);
+		app.config(function($routeProvider) {
+			$routeProvider
+			.when("/home", {
+				templateUrl : "home.htm"
+			})
+			.when("/experiences", {
+				templateUrl : "experiences.htm"
+			})
+			.when("/about", {
+				templateUrl : "about.htm"
+			})
+			.when("/projects", {
+				templateUrl : "projects.htm"
+			})
+			.when("/contact", {
+				templateUrl : "contact.htm"
+			})
+			.when("/services", {
+				templateUrl : "services.htm"
+			})
+			.when("/courses", {
+				templateUrl : "courses.htm"
+			})
+			.when("/career", {
+				templateUrl : "career.htm"
+			})
+			.otherwise({
+				templateUrl : "home.htm"
+			});
+		});
+	</script>
+</head>
+<body ng-app="myApp"><br><br>
+	<header class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 col-sm-5 col-xs-5"></div>
+				<div class="col-md-1 col-sm-1 col-xs-1">
+					<a href="index.htm" class="initials">
+						<div>CL</div>
+					</a>
+				</div>
+				<div class="col-md-5 col-sm-5 col-xs-5"></div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="bleh">
+						<legend>2019</legend>
+					<div class="col-md-3 col-sm-2 col-xs-4"></div>
+					<div class="col-md-3 col-sm-8 col-xs-8">
+						<div class="jright">
+							<img src="img/me.jpg" alt="Picture of me" class="Me">
+						</div>
+					</div>					
+					<div class="col-md-3">
+						<div class="jleft">							
+							<h1>CODY LEE</h1>
+							<hr>
+							<h2>Web Developer</h2>
+						</div>						
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+<div class="container">
+	<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="350">
+	  <div class="container">
+		<div class="navbar-header" style="margin-right:0px; background-color:#4285f4;">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background-color:black;">
+			<span class="icon-bar" style="background-color:#4285f4;"></span>
+			<span class="icon-bar" style="background-color:#4285f4;"></span> 
+			<span class="icon-bar" style="background-color:#4285f4;"></span> 
+		  </button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">      
+			<ul class="nav navbar-nav nav-pills nav-stacked navigation-ul">
+				<li onclick="closeMenu()"><a data-toggle="pill" href="#home">Home</a></li>
+				<li onclick="closeMenu()"><a data-toggle="pill" href="#about">About Me</a></li>
+				<li onclick="closeMenu()"><a data-toggle="pill" href="#projects">Projects</a></li>
+				<li onclick="closeMenu()"><a data-toggle="pill" href="#services">Services</a></li>
+				<li onclick="closeMenu()"><a data-toggle="pill" href="#contact">Contact Me</a></li>
+				<!-- <li onclick="closeMenu()"><a data-toggle="pill" href="#experiences">Experiences</a></li>
+				<li onclick="closeMenu()"><a data-toggle="pill" href="#courses">Courses</a></li>
+				<li onclick="closeMenu()"><a data-toggle="pill" href="#career">Career</a></li> -->
+			</ul>
+		</div>
+	  </div>
+	</nav>				
+	<div class="tab-content">
+		<div ng-view></div>
+		<!--<div id="cover-letter" class="tab-pane fade in">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-5 col-xs-4"></div>
+					<div class="col-sm-7 col-xs-7">
+						<h2>Cover Letter</h2>
+					</div>
+					<div class="col-sm-0 col-xs-1"></div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-10">
+						<p>To whom it may concern,</p>
+						<p>After reading your advertisement for a Web Developer position, and observing the potential and strength your organization shadows in our community, I’m compelled to become a member of such an outstanding leadership model in the information technology field. It sounds like an ideal opportunity that is very similar to my current role. With over a year of web development experience, I feel I have a good grasp of the requirements you are looking to fill.</p>
+						<p>As a brief synopsis, I am a hands-on experienced student who has obtained real-world clients while fostering an academic career. My strengths run deeper than the ability to evaluate and solve different problems with multiple solutions, it is motivated from my ability to emphatically listen to clients and teammates. I embrace new challenges; learn through mentors; and I seek out opportunities.</p>
+						<p>My field experiences challenged me to understand system testing, troubleshooting, validating software issues, work closely with the team, report clearly and accurately to management, and resolve issues with due urgency. This experience has allowed me to know what type of work is expected and the amount of communication that is necessary when speaking to others. Most importantly, I understand my skills are tools to meet users or client’s goals.</p>
+						<p>My strengths are web design languages, particularly HTML, CSS, SQL, Responsive Design (Bootstrap), and most ASP.NET with some C# to coincide with .NET platform. I have consulted with a few local businesses to give them a product they are proud of and can advertise using these exact languages. I am easy to work with. If I don’t know something off the bat, I have no trouble reaching out to my mentors and peers. I have always considered myself a team player.</p>
+						<p>Currently, I am a Web Support Specialist at Wayne Reaves Software and Websites. I am looking to work on exciting projects and take that step up into a full time Web Development/Designer position. I have great personal and motivational skills which allow me to understand the needs of everyone. This applies to my coworkers, superiors, and most importantly the clients!</p>
+						<p>I will follow my application up in the coming days, however please do not hesitate in getting in touch should you have any questions.</p>
+						<p>I am available immediately for interview and am based just a few minutes from your office so please do not hesitate in giving me a call to arrange the next steps.</p> 
+
+						<p>Thank you,</p>
+						<h4><em><b>Cody Lee</b></em></h4>
+
+					</div>
+					<div class="col-sm-1"></div>
+				</div>
+			</div>
+		</div>-->
+		<!--End Cover Letter-->
+	</div>
+</div>
+	
+	<!-- Footer Section -->
+	<nav class="navbar navbar-inverse footer">
+	  <ul class="nav navbar-nav">
+		<li><a class="NoUnderline">Roberta, GA</a></li>
+		<li><a class="NoUnderline" href="tel:4783943718">478-394-3718</a></li>
+		<li><a class="NoUnderline" href="mailto:lee.codya@gmail.com">lee.codya@gmail.com</a></li>
+		<li><a class="NoUnderline" href="http://linkedin.com/in/cody-lee-a83629143" target="_blank">LinkedIn</a></li>
+	  </ul>
+	</nav>
+	
+	<script>
+	
+	    var closeMenu = function()  {
+		  var nav = document.getElementById('myNavbar');
+		  
+		  nav.classList.remove('in');
+		  document.body.scrollTop = 0; // For Chrome, Safari and Opera
+		  document.documentElement.scrollTop = 0; // For IE and Firefox
+		}
+	</script>
+</body>
+</html>

@@ -1,74 +1,458 @@
-ul {text-align:center; font-style:italic; list-style-type:none}
-h1 {text-align:center; font-family:arial}
-h2 {text-align:center}
-p  {margin-left:10px;margin-right:10px; text-align: left; text-indent:25px}
-body {color: maroon; 
-	background-color:maroon;
-	font-family:arial;
-	font-variant:small-caps; 
-	font-size:17px;
-	background-image:url(img/pipes4.jpg);
-	opacity:.9;
-	background-attachment:fixed}
-hr {background-color:black;height:7px;width:100%;text-align:left}
-div {text-align:center;}
-img {max-width:100%}
-
-a:link    {color:blue; text-decoration:none; font-size:1em}
-a:visited {color:navy; text-decoration:none; font-size:1em}
-a:hover   {color:maroon; text-decoration:underline; 
-             font-size:1em}
-a:active  {color:black; text-decoration:underline; font-size:1em}
-
-
-/*HEADER STYLES*/
-#logo {float:left; width: 35%}
-#mid-ga{float:right;}
-#numbers {text-align:left;margin:20px}
-
-
-.wrapper {width:90%; margin:0 auto; max-width: 960px; background-color:white; padding:5%;}
-.right{float:right}
-.left {float:left}
-.clear{clear:both}
-	
-/*NAV SECTION*/
-nav{position:relative;left:0px; top:0px;}
-nav a:link{color:maroon}
-nav a:visited{color:maroon}
-nav *{margin:0; padding:3px; background-color:white; font-size:20px}
-nav a {text-decoration:none; display:block; color:maroon; font-weight:bold; }
-nav a:hover{background-color:maroon; color:white;}
-nav ul {list-style-type:none; z-index:1 }
-nav > ul > li{display:inline-block; position:relative;padding: 0px}
-nav > ul > li:hover> ul{display:block; position:absolute;background-color:maroon;}
-nav > ul > li > a{padding:3px 15px; padding-left:10px;}
-nav > ul > li ul{display:none; min-width:150px}
-nav > ul > li > ul > li{position:relative;}
-nav > ul > li > ul > li:hover > ul{display:block; position:absolute;background-color:maroon;left:151px;top:0;}
-
-
-#main{width: 95%; float:left}
-#pump {float:left; padding-right:2%; padding-bottom:1%}
-#plumber {float:right; padding-left:2%}
-#myCopy{text-align:center}
-#contacts{float:left; text-align:left;}
-#hours{text-align:center;text-decoration:underline;}
-#YP{text-align:center;}
-#shout{text-align:center}
-
-	
-
-/*MEDIA QUERIES*/
-@media print {
-	nav,footer,members{display:none}
-	#main{width:100%}
+/*PureCss and/or Skeleton? for version 3*/
+/*
+BLUE: #4285f4
+*/
+.center{
+	text-align:center
+}
+.right{
+	text-align: right
+}
+.left{
+	text-align: left
+}
+.container{
+	padding-left:0px !important;
+	padding-right:0px !important;
+}
+.thumbnail a:hover{
+	text-decoration:none;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+	background-color:#4285f4;
+}
+.navbar-inverse .navbar-nav>li>a{
+	color:black !important;
+	-webkit-transition: background-color 0.5s, color 0.5s; /* Safari */
+    transition: background-color 0.5s, color 0.5s;
+}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>.active>a{
+	background-color:black !important;
+	color:#4285f4 !important;
+}
+.navbar{
+	border-radius:0px !important;
+}
+.navigation-ul{
+	margin-left:20% !important;
+}
+.thumbnail{
+	border:none !important;
+}
+.bleh{
+	padding:3%;
+	border-width:2px;
+	border-color:black !important;
+	background-color:white !important;
+}
+.jleft{
+	text-align:center;
+}
+.jleft h1, .jleft h2{
+	font-size:2.8em !important;
+}
+.nav-stacked>li+li {
+     margin-top: 0px !important;
+}
+.Me{
+	border-radius:100%;
+	border: 5px solid #4285f4;
+	max-width:70%;
+	margin-bottom:2em;
+}
+.experiences fieldset{
+	border-width:0px; 
+}
+.experiences legend{
+	text-align:center;
+	color:white;
+	letter-spacing:2px;
+	font-size:1.5em;
+}
+.projects fieldset{
+	border-width:0px; 
+	margin:0 auto;
+	width:95%;
+}
+.projects legend{
+	text-align:center;
+	color:black;
+	letter-spacing:2px;
+	font-size:1.5em;
+	/*background-color:black*/
+}
+.services fieldset{
+	border-width:0px; 
+	margin:0 auto;
+	width:95%;
+}
+.services legend{
+	text-align:center;
+	color:black;
+	letter-spacing:2px;
+	font-size:1.5em;
+	/*background-color:black*/
+}
+.about fieldset{
+	border-width:0px; 
+	margin:0 auto;
+	width:95%;
+}
+.about legend{
+	text-align:center;
+	color:black;
+	letter-spacing:2px;
+	font-size:1.5em;
+	/*background-color:black*/
+}
+.contact fieldset{
+	border-width:0px; 
+	margin:0 auto;
+	width:95%;
+}
+.contact legend{
+	text-align:center;
+	color:black;
+	letter-spacing:2px;
+	font-size:1.5em;
+	/*background-color:black*/
+}
+.footer{
+	background-color:#4285f4 !important;
+}
+.welcome{
+	padding-bottom:4em
+}
+.actually-do{
+	background-color: rgba(9, 64, 155, 0.65);
+}
+.actually-do .container-fluid{
+	padding:5em
+}
+.panel-title{
+	text-align:center;
+	text-transform: uppercase;
+}
+.panel-default{
+	background-color:#4285f4 !important;
+}
+.panel a:hover{
+	text-decoration: none
 }
 
-@media only screen and (max-width:550px){
-	nav{float:none; width:100%}
-	#projects{width:50%}
-	#main{float:none; width:100%}
-	#logo, #numbers {float:none; width:100%}
-	#mid-ga{float:none;}
+/*HEADER*/
+.affix {
+      top: 0;
+      width: 100%;
+  }
+.affix + .container {
+      padding-top: 70px;
+  }
+.row{
+	margin-right:0px !important;
+	margin-left:0px !important;
+}
+header legend{
+	color:black;
+	font-size:1em;
+	text-align:center;
+	border-bottom-color:white !important;
+}
+hr{
+	width:7em; 
+	height:1.5px; 
+	background-color:black;
+}
+.services hr{
+	width:100%; 
+	height:2px; 
+	background-color:black;
+}
+.initials{
+	text-align:center; 
+	border: 2px solid black; 
+	padding:0; 
+	margin:0; 
+	width:1.5em; 
+	float:left;
+	font-size:1.7em;
+	margin-left:95%;
+	text-decoration:none; 
+	color:black;
+	-webkit-transition:background-color 0.75s;
+	transition: background-color 0.75s;
+}
+.initials:hover{
+	background-color:#4285f4 !important;
+	color:white !important;
+	text-decoration:none;
+}
+.intro{
+	margin:0 auto;
+	width:55%; 
+	font-size:1.2em; 
+	text-align:center
+}
+nav{
+	position:absolute;
+	z-index:5;
+	font-weight:bold;
+}
+.link2{
+	margin-top:50px;
+}
+.link1 a, .link2 a{
+	text-decoration:none; 
+	background-color:black; 
+	color:white; 
+	font-weight:bold; 
+	padding:1.5%;
+	font-size:0.9em;
+	-webkit-transition:font-size 0.5s;
+	transition: font-size 0.5s;	
+	border-radius:10px;
+}
+.link1 a:hover, .link2 a:hover{
+	background-color:grey; 
+	color:black; 
+	font-size:1em;
+	text-decoration:none;
+}
+
+/*EXPERIENCES SECTION*/
+.experiences{
+	margin:2.5% 0px 0px 0px;
+	background-color:#3f3f3f;
+	width:100%;
+	color:white;
+}
+.exp-wrapper{
+	margin:0 auto;
+	width:90%;
+}
+.download{
+	float:left;
+	width:50%;
+	text-align:center;
+	margin-top:12%;	
+}
+.download a{
+	text-decoration:none; 
+	background-color:black; 
+	color:white; 
+	font-size:2em;
+	font-weight:bold; 
+	padding:2.5%;
+	-webkit-transition:font-size 0.5s;
+	transition: font-size 0.5s;
+	border-radius:10px;
+}
+.download a:hover{
+	background-color:grey; 
+	color:black; 
+	font-size:2.1em;
+}
+.career-history, .skills, .education{
+	background-color:#4285f4;
+	border-radius:8px;
+	margin-top:5px;
+	margin-bottom:5px;
+	color:black;
+	box-shadow: 5px 5px 5px;
+
+}
+.exp-wrapper h1{
+	margin-top:0px;
+	padding:5px;
+	text-align:center; 
+	background-color:black;
+	color:white;
+}
+.chText{
+	padding-right:7px;
+}
+
+/*CONTACT ME SECTION*/
+.class h1{
+	text-align:center !important;
+}
+input[type=text], input[type=email], textarea[name=Message] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color:#4285f4;
+    color: black;
+	font-weight:bold !important;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #2169af;
+}
+
+/*SERVICES SECTION*/
+.services{
+	margin:0px;
+	width:100%;
+	padding-top:1.5%
+}
+.step-desc{
+	background-color:#fefefe;
+	padding:4em;
+	border-radius:2em;
+	color:#2169af
+}
+.step-num{
+	padding-top:5em
+}
+.service-button{
+	background-color:rgba(0,0,0,.85);
+	color:white;
+}
+.service-button:hover{
+	background-color:white;
+	color:black;
+}
+
+/*ABOUT SECTION*/
+.about{
+	margin:0px;
+	width:100%;
+	padding-top:1.5%
+}
+
+/*PROJECTS SECTION*/
+.projects{
+	margin:0px;
+	width:100%;
+	padding-top:1.5%
+}
+.container0, .container1, .container2, .container3, .container4 {
+  position: relative;
+  width: 80%;
+  padding:0px !important;
+  margin-bottom:8px;
+}
+.image {
+  display: block;
+  width: 100%;
+  height:250px !important;
+  box-shadow: 5px 5px 5px gray;
+}
+.container0:hover .overlay, .container1:hover .overlay, .container2:hover .overlay, .container3:hover .overlay, .container4:hover .overlay {
+  opacity: 1;
+}
+
+.responsive {
+    margin: 1.5%;
+    float: left;
+    width: 24.99999%;
+}
+/*MEDIA QUERIES*/
+@media (min-width: 1200px){
+	.container {
+		width: 100%  !important;
+	}
+}
+@media (min-width: 992px){
+	.container {
+		width: 100% !important;
+	}
+}
+@media (min-width: 768px){
+	/* .container {
+		width: 100% !important;
+	} */
+	
+}
+@media only screen and (max-width: 1200px){
+    .responsive {
+        width: 45%;
+        margin: 10px;
+    }
+    .text{
+    font-size: 18px;
+    }
+	.bottom{
+	float:left;
+	width:100%;
+	margin-left:0px;
+	margin-top:8px;
+	}
+}
+
+@media only screen and (max-width: 1000px){
+	.link2{
+		margin-top:25px;
+		margin-bottom:25px;
+	}
+	.bottom{
+	float:left;
+	width:100%;
+	margin-left:0px;
+	margin-top:8px;
+	}
+	.footer .navbar-nav{
+		margin:0px !important;
+	}
+	.Me{
+		width:50%;
+	}
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 65%;
+        margin: 6px;
+    }
+    .text{
+    font-size: 18px;
+    }
+	.experiences{
+		font-size:0.8em;
+		padding-bottom:20px;
+	}
+	
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+		margin-left:0px;
+    }
+    .text{
+		font-size: 15px;
+    }
+	.image{
+		height:200px;
+	}
+	.intro{
+		font-size:1em;
+		width:100%;
+	}
+	.experiences{
+		font-size:0.8em;
+		padding-bottom:20px;
+	}
+	.link2{
+		margin-top:0px;
+		margin-bottom:0px;
+	}
+	.jleft h1, .jleft h2{
+		font-size:1.2em !important;
+	}
+	.navigation-ul{
+		margin-left: 0 !important;
+		text-align:center
+	}
 }
