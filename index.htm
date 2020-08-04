@@ -12,39 +12,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-	<script>
-		var app = angular.module("myApp", ["ngRoute"]);
-		app.config(function($routeProvider) {
-			$routeProvider
-			.when("/home", {
-				templateUrl : "home.htm"
-			})
-			.when("/experiences", {
-				templateUrl : "experiences.htm"
-			})
-			.when("/about", {
-				templateUrl : "about.htm"
-			})
-			.when("/projects", {
-				templateUrl : "projects.htm"
-			})
-			.when("/contact", {
-				templateUrl : "contact.htm"
-			})
-			.when("/services", {
-				templateUrl : "services.htm"
-			})
-			.when("/courses", {
-				templateUrl : "courses.htm"
-			})
-			.when("/career", {
-				templateUrl : "career.htm"
-			})
-			.otherwise({
-				templateUrl : "home.htm"
-			});
-		});
-	</script>
 </head>
 <body ng-app="myApp"><br><br>
 	<header class="wrapper">
@@ -151,9 +118,39 @@
 		<li><a class="NoUnderline" href="http://linkedin.com/in/cody-lee-a83629143" target="_blank">LinkedIn</a></li>
 	  </ul>
 	</nav>
-	
 	<script>
-	
+		var app = angular.module("myApp", ["ngRoute"]);
+		app.config(function($routeProvider) {
+			$routeProvider
+			.when("/home", {
+				templateUrl : "home.htm"
+			})
+			.when("/experiences", {
+				templateUrl : "experiences.htm"
+			})
+			.when("/about", {
+				templateUrl : "about.htm"
+			})
+			.when("/projects", {
+				templateUrl : "projects.htm"
+			})
+			.when("/contact", {
+				templateUrl : "contact.htm"
+			})
+			.when("/services", {
+				templateUrl : "services.htm"
+			})
+			.when("/courses", {
+				templateUrl : "courses.htm"
+			})
+			.when("/career", {
+				templateUrl : "career.htm"
+			})
+			.otherwise({
+				templateUrl : "home.htm"
+			});
+		});
+		
 	    var closeMenu = function()  {
 		  var nav = document.getElementById('myNavbar');
 		  
