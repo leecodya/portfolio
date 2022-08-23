@@ -27,7 +27,7 @@
                     <h3><strong>I do not have the need to impress you with the jargons of web developing. Once you approach me for any service, I start with consultation and delivery schedule plans. Once I have this on ground, I will embark on designing a responsive and scalable website and website application which I will deliver on the nick of time with reference to budget equity. </strong></h3>
                 </div>
                 <div class="col-md-4 center">
-                    <img src="img/delivery.png" alt="Prompt Delivery" width="100%">
+                    <img src="{{ url_for('static', filename='delivery.png') }}" alt="Prompt Delivery" width="100%">
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -49,8 +49,8 @@
                         <p>That’s why I felt the need to develop this website about me & my services, and showcase my web development portfolio.</strong></p></h2>                   
                 </div>
                 <div class="col-md-5 center">
-                    <h3>For more information, and to discuss how my services can help your business, why not get in touch? You can reach me directly at <a href="tel:4783943718">478-394-3718</a> or visit my <a href="#contact">contact page</a> to fill out the form! I look forward to hearing and working with you soon!</h3>
-                    <img src="img/site.png" alt="My Site" width="90%">
+                    <h3>For more information, and to discuss how my services can help your business, why not get in touch? You can reach me directly at <a href="tel:4783943718">478-394-3718</a> or visit my <a href="{{ url_for('contact') }}">contact page</a> to fill out the form! I look forward to hearing and working with you soon!</h3>
+                    <img src="{{ url_for('static', filename='site.png') }}" alt="My Site" width="90%">
                 </div>
                 <div class="col-md-1"></div>
             </div>
