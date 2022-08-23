@@ -1,17 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Cody Lee</title>
+	<title>{% block title %}{% endblock %} | {{ name }}</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="Cody Lee, Cody, Lee, web, website, websites, developer, web developer, website developer, junior web developer, junior website developer, web design, web designer, entry level web designer, Macon, Ga, Warner Robins, Ga, middle Georgia area, mid-ga area, middle ga are, Roberta, Ga">
 	<meta name="description" content="My name is Cody Lee and I am a junior web developer/web designer here in middle Georgia. I specialize in Responsive web development using Bootstrap, and using the latest techniques in HTML and CSS. I am a recent college honor graduate from Middle Georgia State University currently living in Roberta, GA.">
-	<link href="style.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body ng-app="myApp"><br><br>
 	<header class="wrapper">
@@ -73,8 +73,8 @@
 		</div>
 	  </div>
 	</nav>				
-	<div class="tab-content">
-		<div ng-view></div>
+	<main>
+		{% block content %}{% endblock %}
 		<!--<div id="cover-letter" class="tab-pane fade in">
 			<div class="container">
 				<div class="row">
@@ -106,7 +106,7 @@
 			</div>
 		</div>-->
 		<!--End Cover Letter-->
-	</div>
+	</main>
 </div>
 	
 	<!-- Footer Section -->
