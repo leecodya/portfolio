@@ -9,12 +9,43 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body ng-app="myApp"><br><br>
 	<header class="wrapper">
+		<!--<nav class="navbar">
+			<div class="container">
+			  <div class="navbar-header" style="margin-right:0px; background-color:#4285f4;">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background-color:black;">
+				  <span class="icon-bar" style="background-color:#4285f4;"></span>
+				  <span class="icon-bar" style="background-color:#4285f4;"></span> 
+				  <span class="icon-bar" style="background-color:#4285f4;"></span> 
+				</button>
+			  </div>
+			  <div class="collapse navbar-collapse" id="myNavbar">      
+				  <ul class="nav navbar-nav nav-pills nav-stacked navigation-ul">
+					  <li class="nav-item  pl-2 pr-2">
+						  <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+					  </li>
+					  <li class="nav-item  pl-2 pr-2">
+						  <a class="nav-link" href="{{ url_for('about') }}">About Me</a>
+					  </li>
+					  <li class="nav-item  pl-2 pr-2">
+						  <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+					  </li> 
+					  <li class="nav-item  pl-2 pr-2">
+						  <a class="nav-link" href="{{ url_for('services') }}">Services</a>
+					  </li> 
+					  <li class="nav-item  pl-2 pr-2">
+						  <a class="nav-link" href="{{ url_for('contact') }}">Contact Me</a>
+					  </li>
+					  <li onclick="closeMenu()"><a data-toggle="pill" href="#experiences">Experiences</a></li>
+					  <li onclick="closeMenu()"><a data-toggle="pill" href="#courses">Courses</a></li>
+					  <li onclick="closeMenu()"><a data-toggle="pill" href="#career">Career</a></li>
+				  </ul>
+			  </div>
+			</div>
+		</nav>-->
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-sm-5 col-xs-5"></div>
@@ -49,75 +80,42 @@
 			</div>
 		</div>
 	</header>
-<div class="container">
-	<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="350">
-	  <div class="container">
-		<div class="navbar-header" style="margin-right:0px; background-color:#4285f4;">
-		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background-color:black;">
-			<span class="icon-bar" style="background-color:#4285f4;"></span>
-			<span class="icon-bar" style="background-color:#4285f4;"></span> 
-			<span class="icon-bar" style="background-color:#4285f4;"></span> 
-		  </button>
-		</div>
-		<div class="collapse navbar-collapse" id="myNavbar">      
-			<ul class="nav navbar-nav nav-pills nav-stacked navigation-ul">
-				<li class="nav-item  pl-2 pr-2">
-					<a class="nav-link" href="{{ url_for('home') }}">Home</a>
-				</li>
-				<li class="nav-item  pl-2 pr-2">
-					<a class="nav-link" href="{{ url_for('about') }}">About Me</a>
-				</li>
-				<li class="nav-item  pl-2 pr-2">
-					<a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
-				</li>
-				<!-- <li class="nav-item  pl-2 pr-2">
-					<a class="nav-link" href="{{ url_for('services') }}">Services</a>
-				</li> -->
-				<li class="nav-item  pl-2 pr-2">
-					<a class="nav-link" href="{{ url_for('contact') }}">Contact Me</a>
-				</li>
-				<!-- <li onclick="closeMenu()"><a data-toggle="pill" href="#experiences">Experiences</a></li> -->
-				<!-- <li onclick="closeMenu()"><a data-toggle="pill" href="#courses">Courses</a></li> -->
-				<!-- <li onclick="closeMenu()"><a data-toggle="pill" href="#career">Career</a></li> -->
-			</ul>
-		</div>
-	  </div>
-	</nav>				
-	<main>
-		{% block content %}{% endblock %}
-		<!--<div id="cover-letter" class="tab-pane fade in">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-5 col-xs-4"></div>
-					<div class="col-sm-7 col-xs-7">
-						<h2>Cover Letter</h2>
+	<div class="container">				
+		<main>
+			{% block content %}{% endblock %}
+			<!--<div id="cover-letter" class="tab-pane fade in">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-5 col-xs-4"></div>
+						<div class="col-sm-7 col-xs-7">
+							<h2>Cover Letter</h2>
+						</div>
+						<div class="col-sm-0 col-xs-1"></div>
 					</div>
-					<div class="col-sm-0 col-xs-1"></div>
-				</div>
-				<hr>
-				<div class="row">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-10">
-						<p>To whom it may concern,</p>
-						<p>After reading your advertisement for a Web Developer position, and observing the potential and strength your organization shadows in our community, I’m compelled to become a member of such an outstanding leadership model in the information technology field. It sounds like an ideal opportunity that is very similar to my current role. With over a year of web development experience, I feel I have a good grasp of the requirements you are looking to fill.</p>
-						<p>As a brief synopsis, I am a hands-on experienced student who has obtained real-world clients while fostering an academic career. My strengths run deeper than the ability to evaluate and solve different problems with multiple solutions, it is motivated from my ability to emphatically listen to clients and teammates. I embrace new challenges; learn through mentors; and I seek out opportunities.</p>
-						<p>My field experiences challenged me to understand system testing, troubleshooting, validating software issues, work closely with the team, report clearly and accurately to management, and resolve issues with due urgency. This experience has allowed me to know what type of work is expected and the amount of communication that is necessary when speaking to others. Most importantly, I understand my skills are tools to meet users or client’s goals.</p>
-						<p>My strengths are web design languages, particularly HTML, CSS, SQL, Responsive Design (Bootstrap), and most ASP.NET with some C# to coincide with .NET platform. I have consulted with a few local businesses to give them a product they are proud of and can advertise using these exact languages. I am easy to work with. If I don’t know something off the bat, I have no trouble reaching out to my mentors and peers. I have always considered myself a team player.</p>
-						<p>Currently, I am a Web Support Specialist at Wayne Reaves Software and Websites. I am looking to work on exciting projects and take that step up into a full time Web Development/Designer position. I have great personal and motivational skills which allow me to understand the needs of everyone. This applies to my coworkers, superiors, and most importantly the clients!</p>
-						<p>I will follow my application up in the coming days, however please do not hesitate in getting in touch should you have any questions.</p>
-						<p>I am available immediately for interview and am based just a few minutes from your office so please do not hesitate in giving me a call to arrange the next steps.</p> 
+					<hr>
+					<div class="row">
+						<div class="col-sm-1"></div>
+						<div class="col-sm-10">
+							<p>To whom it may concern,</p>
+							<p>After reading your advertisement for a Web Developer position, and observing the potential and strength your organization shadows in our community, I’m compelled to become a member of such an outstanding leadership model in the information technology field. It sounds like an ideal opportunity that is very similar to my current role. With over a year of web development experience, I feel I have a good grasp of the requirements you are looking to fill.</p>
+							<p>As a brief synopsis, I am a hands-on experienced student who has obtained real-world clients while fostering an academic career. My strengths run deeper than the ability to evaluate and solve different problems with multiple solutions, it is motivated from my ability to emphatically listen to clients and teammates. I embrace new challenges; learn through mentors; and I seek out opportunities.</p>
+							<p>My field experiences challenged me to understand system testing, troubleshooting, validating software issues, work closely with the team, report clearly and accurately to management, and resolve issues with due urgency. This experience has allowed me to know what type of work is expected and the amount of communication that is necessary when speaking to others. Most importantly, I understand my skills are tools to meet users or client’s goals.</p>
+							<p>My strengths are web design languages, particularly HTML, CSS, SQL, Responsive Design (Bootstrap), and most ASP.NET with some C# to coincide with .NET platform. I have consulted with a few local businesses to give them a product they are proud of and can advertise using these exact languages. I am easy to work with. If I don’t know something off the bat, I have no trouble reaching out to my mentors and peers. I have always considered myself a team player.</p>
+							<p>Currently, I am a Web Support Specialist at Wayne Reaves Software and Websites. I am looking to work on exciting projects and take that step up into a full time Web Development/Designer position. I have great personal and motivational skills which allow me to understand the needs of everyone. This applies to my coworkers, superiors, and most importantly the clients!</p>
+							<p>I will follow my application up in the coming days, however please do not hesitate in getting in touch should you have any questions.</p>
+							<p>I am available immediately for interview and am based just a few minutes from your office so please do not hesitate in giving me a call to arrange the next steps.</p> 
 
-						<p>Thank you,</p>
-						<h4><em><b>Cody Lee</b></em></h4>
+							<p>Thank you,</p>
+							<h4><em><b>Cody Lee</b></em></h4>
 
+						</div>
+						<div class="col-sm-1"></div>
 					</div>
-					<div class="col-sm-1"></div>
 				</div>
-			</div>
-		</div>-->
-		<!--End Cover Letter-->
-	</main>
-</div>
+			</div>-->
+			<!--End Cover Letter-->
+		</main>
+	</div>
 	
 	<!-- Footer Section -->
 	<nav class="navbar navbar-inverse footer">
