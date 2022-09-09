@@ -78,18 +78,6 @@ BLUE: #4285f4
 	letter-spacing:2px;
 	font-size:1.5em;
 }
-.projects fieldset{
-	border-width:0px; 
-	margin:0 auto;
-	width:95%;
-}
-.projects legend{
-	text-align:center;
-	color:black;
-	letter-spacing:2px;
-	font-size:1.5em;
-	/*background-color:black*/
-}
 .services fieldset{
 	border-width:0px; 
 	margin:0 auto;
@@ -341,10 +329,8 @@ input[type=submit]:hover {
 }
 
 /*PROJECTS SECTION*/
-.projects{
-	margin:0px;
-	width:100%;
-	padding-top:1.5%
+.projects {
+	padding: 3em;
 }
 .container0, .container1, .container2, .container3, .container4 {
   position: relative;
