@@ -48,11 +48,10 @@ BLUE: #4285f4
 .thumbnail{
 	border:none !important;
 }
-.bleh{
+.heading{
 	padding:3%;
 	border-width:2px;
 	border-color:black !important;
-	background-color:white !important;
 }
 .jleft{
 	text-align:center;
@@ -141,7 +140,7 @@ header legend{
 	color:black;
 	font-size:1em;
 	text-align:center;
-	border-bottom-color:white !important;
+	border-bottom: none;
 }
 hr{
 	width:7em; 
