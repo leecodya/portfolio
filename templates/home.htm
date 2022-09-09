@@ -26,15 +26,15 @@
 						<h3>As a web developer, I can do more than just develop a website for you and your business. I take the time to understand your needs and build a strategy and plan on how to optimize your web presence. Some of those strategies are as follows:	</h3>
 					</div>
 					<div class="col-md-6 col-md-pull-4">
-						<div class="panel-group">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 							<!--Design-->
 							<div class="panel panel-default">
-								<a data-toggle="collapse" data-target="#collapse1" href="#collapse1" style="color:white">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="color:white" aria-expanded="true" aria-controls="collapse1">
 									<div class="panel-heading">
 										<h3 class="panel-title">Design</h3>
 									</div>
 								</a>
-								<div id="collapse1" class="panel-collapse collapse" style="border-top:1px solid white">
+								<div id="collapse1" class="panel-collapse collapse in" style="border-top:1px solid white" role="tabpanel">
 									<div class="panel-body row" style="color:white">
 										<ul class="col-md-6">
 											<li><h4>Custom Web Design</h4></li>
@@ -53,12 +53,12 @@
 							</div>
 							<!--Developer-->
 							<div class="panel panel-default">
-								<a data-toggle="collapse" data-target="#collapse2" href="#collapse2" style="color:white">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="color:white" aria-expanded="true" aria-controls="collapse2">
 										<div class="panel-heading">
 										<h3 class="panel-title">Developer</h3>
 									</div>
 								</a>
-								<div id="collapse2" class="panel-collapse collapse" style="border-top:1px solid white">
+								<div id="collapse2" class="panel-collapse collapse" role="tabpanel" style="border-top:1px solid white">
 									<div class="panel-body row" style="color:white">
 										<ul class="col-md-6">
 											<li><h4>Responsive</h4></li>
