@@ -102,18 +102,6 @@ BLUE: #4285f4
 	font-size:1.5em;
 	/*background-color:black*/
 }
-.contact fieldset{
-	border-width:0px; 
-	margin:0 auto;
-	width:95%;
-}
-.contact legend{
-	text-align:center;
-	color:black;
-	letter-spacing:2px;
-	font-size:1.5em;
-	/*background-color:black*/
-}
 .footer{
 	background-color:#4285f4 !important;
 }
@@ -270,6 +258,9 @@ nav{
 }
 
 /*CONTACT ME SECTION*/
+.contact {
+	padding: 2em;
+}
 .class h1{
 	text-align:center !important;
 }
@@ -330,8 +321,12 @@ input[type=submit]:hover {
 
 /*PROJECTS SECTION*/
 .projects {
-	padding: 3em;
+	padding: 2em;
 }
+.image-border {
+	border: black 2px solid;
+}
+
 .container0, .container1, .container2, .container3, .container4 {
   position: relative;
   width: 80%;
